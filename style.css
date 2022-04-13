@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.circle{
+    display: grid;
+    place-content: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: 12px solid white;
+    border-top: 12px solid rgb(235, 59, 89);
+    border-bottom: 12px solid slateblue;
+    animation: rotation 2000ms infinite;
+}
+
+@keyframes rotation{
+    25% {
+        transform: scale(0) rotate(720deg);
+    }
+    50% {
+        transform: scale(1) rotate(-720deg);
+    }
+    75% {
+        transform: scale(1) rotate(720deg);
+    }
+}
+
+.inner{
+    width: 7rem;
+    height: 7rem;
+    border-top: 12px solid rgb(23, 155, 23);
+    border-bottom: 12px solid rgb(253, 253, 56);
+    animation: inner-rotation 2000ms infinite;
+}
+
+@keyframes inner-rotation{
+    25% {
+        transform: scale(1) rotate(-360deg);
+    }
+    50% {
+        transform: scale(0) rotate(360deg);
+    }
+    75% {
+        transform: scale(1) rotate(-360deg);
+    }
+}
